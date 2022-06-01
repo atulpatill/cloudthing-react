@@ -1,6 +1,7 @@
 import React from 'react'
 import styled from "styled-components";
 
+
 const MovieContainer = styled.div`
 display: flex;
 flex-direction: column;
@@ -10,7 +11,6 @@ box-shadow: 0 3px 10px 0 #aaa;
 cursor: pointer;
 `;
 
-// ..............
 
 const CoverImage = styled.img`
   object-fit: cover;
@@ -46,7 +46,7 @@ function NewsComponent(props) {
    
   return (
     <MovieContainer onClick={() => window.open(webUrl, "_blank")}>
-        <CoverImage src={webUrl} alt="Deafult" />
+        <CoverImage src='/defaultnews.webp' alt="Thumbnail" />
       <NewsName>{webTitle}</NewsName>
       <InfoColumn>
         <NewsInfo>Section : {sectionName}</NewsInfo>
