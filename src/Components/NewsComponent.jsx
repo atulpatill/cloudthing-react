@@ -2,7 +2,7 @@ import React from 'react'
 import styled from "styled-components";
 
 
-const MovieContainer = styled.div`
+const NewsContainer = styled.div`
 display: flex;
 flex-direction: column;
 padding: 10px;
@@ -45,14 +45,14 @@ function NewsComponent(props) {
     const {type, webTitle, webUrl, sectionName}  = props.news
    
   return (
-    <MovieContainer onClick={() => window.open(webUrl, "_blank")}>
+    <NewsContainer onClick={() => window.open(webUrl, "_blank")}>
         <CoverImage src='/defaultnews.webp' alt="Thumbnail" />
       <NewsName>{webTitle}</NewsName>
       <InfoColumn>
         <NewsInfo>Section : {sectionName}</NewsInfo>
         <NewsInfo>Type :{type} </NewsInfo>
       </InfoColumn>
-    </MovieContainer>
+    </NewsContainer>
   )
 }
 
